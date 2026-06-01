@@ -72,7 +72,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 1.4rem 3rem;
+      padding: 0rem 3rem;
       background: rgba(249, 245, 238, 0.85);
       backdrop-filter: blur(12px);
       -webkit-backdrop-filter: blur(12px);
@@ -141,7 +141,7 @@
     }
 
     .hero-eyebrow {
-      font-size: 0.95rem;
+      font-size: 1.1rem;
       letter-spacing: 0.16em;
       text-transform: uppercase;
       color: var(--accent);
@@ -174,7 +174,7 @@
 
     .hero-sub {
       font-family: var(--serif);
-      font-size: clamp(1.1rem, 1.8vw, 1.45rem);
+      font-size: clamp(1.1rem, 2.0vw, 1.45rem);
       font-weight: 300;
       font-style: italic;
       color: var(--warm-gray);
@@ -323,7 +323,7 @@
     }
 
     .section-label {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
       letter-spacing: 0.18em;
       text-transform: uppercase;
       color: var(--accent);
@@ -435,7 +435,7 @@
     }
 
     .step-body h3 {
-      font-size: 1.15rem;
+      font-size: 1.4rem;
       font-weight: 500;
       margin-bottom: 0.35rem;
     }
@@ -630,6 +630,46 @@
       color: var(--warm-gray);
       line-height: 1.7;
       max-width: none;
+    }
+
+    /* ── Purpose statement ─────────────────────────────────── */
+    .purpose-statement {
+      margin-top: 5rem;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-top: 1px solid var(--sage);
+    }
+
+    .purpose-label {
+      font-size: 1.1rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+    }
+
+    .purpose-label::before,
+    .purpose-label::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    .purpose-quote {
+      font-family: var(--serif);
+      font-size: clamp(1.6rem, 2.8vw, 2.6rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--green);
+      line-height: 1.4;
+      max-width: 680px;
+      margin: 0 auto;
     }
 
     /* ── Founder strip ─────────────────────────────────────── */
@@ -1007,7 +1047,7 @@
           Three ways in.<br />
           <em>No wrong door.</em>
         </h2>
-        <p class="reveal" style="color: var(--warm-gray); font-size: 0.9rem; margin-top: 0.5rem; margin-bottom: 0;">
+        <p class="reveal" style="color: var(--warm-gray); font-size: 1.0rem; margin-top: 0.5rem; margin-bottom: 0;">
           Every person arrives differently. The platform meets them where they are.
         </p>
 
@@ -1118,7 +1158,7 @@
     <div class="section-label reveal">What We Believe</div>
     <h2 class="section-title reveal">
       Twelve values.<br />
-      <em>One conviction.</em>
+      <em>One purpose.</em>
     </h2>
 
     <div class="values-grid">
@@ -1131,30 +1171,55 @@
         <p>Not a handout — a chance. Dignity, opportunity, and hope aren't luxuries. They're rights.</p>
       </div>
       <div class="value-item reveal" style="animation-delay: 0.1s">
-        <h3>Simplicity is respect.</h3>
-        <p>Every unnecessary word, every confusing step we eliminate is an act of respect. Complexity is the enemy. Clarity is the goal.</p>
+        <h3>First things first.</h3>
+        <p>We do the most important thing before the next thing. We build carefully, prioritize honestly, and never let the urgent crowd out the essential.</p>
       </div>
       <div class="value-item reveal" style="animation-delay: 0.15s">
-        <h3>Elegance matters.</h3>
-        <p>The people who use this product deserve beautiful things, not just functional ones. How something feels is part of what it does.</p>
+        <h3>Show up.</h3>
+        <p>Imperfectly if necessary. Late if unavoidable. But show up. An imperfect effort beats a perfect excuse every time.</p>
       </div>
       <div class="value-item reveal" style="animation-delay: 0.2s">
         <h3>Walk alongside. Don't carry.</h3>
         <p>We remove friction. We open doors. The journey belongs to the person making it.</p>
       </div>
       <div class="value-item reveal" style="animation-delay: 0.25s">
-        <h3>We hire the people we serve.</h3>
-        <p>Lived experience is a credential. No training manual replicates it. This is core business strategy — and mission outcome.</p>
-      </div>
-      <div class="value-item reveal" style="animation-delay: 0.3s">
         <h3>Earned trust. Always.</h3>
         <p>Trust is demonstrated through transparency and consistency. Every time. No exceptions.</p>
       </div>
+      <div class="value-item reveal" style="animation-delay: 0.3s">
+        <h3>Simplicity is respect.</h3>
+        <p>Every unnecessary word, every confusing step we eliminate is an act of respect. Complexity is the enemy. Clarity is the goal.</p>
+      </div>
       <div class="value-item reveal" style="animation-delay: 0.35s">
+        <h3>Elegance matters.</h3>
+        <p>The people who use this product deserve beautiful things, not just functional ones. How something feels is part of what it does.</p>
+      </div>
+      <div class="value-item reveal" style="animation-delay: 0.4s">
+        <h3>Integrity without exception.</h3>
+        <p>We do what we say. We say what we mean. We own our mistakes and fix them. If we wouldn't be comfortable explaining a decision to the people we serve, we don't make it.</p>
+      </div>
+      <div class="value-item reveal" style="animation-delay: 0.45s">
+        <h3>Courage over comfort.</h3>
+        <p>We make hard decisions when the mission requires it. We say no to money, partnerships, and opportunities that compromise our values.</p>
+      </div>
+      <div class="value-item reveal" style="animation-delay: 0.5s">
+        <h3>We hire the people we serve.</h3>
+        <p>Lived experience is a credential. No training manual replicates it. This is core business strategy — and mission outcome.</p>
+      </div>
+      <div class="value-item reveal" style="animation-delay: 0.55s">
         <h3>The long game.</h3>
         <p>We build for the decade, not the quarter. Sustainable impact over fast growth. Always.</p>
       </div>
     </div>
+
+    <!-- One Purpose statement -->
+    <div class="purpose-statement reveal">
+      <div class="purpose-label">Our Purpose</div>
+      <blockquote class="purpose-quote">
+        "We help people get what they deserve.<br />Dignity. Opportunity. Hope for the future."
+      </blockquote>
+    </div>
+
   </section>
 
   <!-- ── Founder ──────────────────────────────────────────── -->
