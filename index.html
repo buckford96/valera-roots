@@ -87,7 +87,7 @@
     }
 
     .nav-logo-img {
-      height: 56px;
+      height: 110px;
       width: auto;
     }
 
@@ -378,7 +378,7 @@
     }
 
     .problem-card h3 {
-      font-size: 1.15rem;
+      font-size: 1.4rem;
       font-weight: 500;
       margin-bottom: 0.75rem;
       color: var(--green);
@@ -456,11 +456,11 @@
 
     .modes-header {
       background: var(--green);
-      padding: 1.2rem 1.75rem;
+      padding: 1.4rem 1.75rem;
       font-family: var(--serif);
-      font-size: 1rem;
-      color: rgba(255,255,255,0.8);
-      letter-spacing: 0.1em;
+      font-size: 1.35rem;
+      color: rgba(255,255,255,0.9);
+      letter-spacing: 0.06em;
     }
 
     .mode-tab-group {
@@ -484,6 +484,76 @@
     .mode-tab.active {
       color: var(--green);
       border-bottom-color: var(--green);
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    .guided-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0 1.75rem;
+    }
+
+    .guided-btn {
+      padding: 0.75rem 1rem;
+      border: 1px solid var(--sage);
+      border-radius: 6px;
+      font-size: 0.95rem;
+      color: var(--deep);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .guided-btn:hover {
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    .guided-btn-active {
+      border-color: var(--green);
+      background: var(--sage);
+      color: var(--green);
+      font-weight: 400;
+    }
+
+    .checklist-wrap {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .checklist-section {
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--green);
+      margin-bottom: 0.5rem;
+    }
+
+    .checklist-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 1rem;
+      color: var(--deep);
+      cursor: pointer;
+      padding: 0.25rem 0;
+    }
+
+    .checklist-item input[type="checkbox"] {
+      width: 18px;
+      height: 18px;
+      accent-color: var(--green);
+      cursor: pointer;
+      flex-shrink: 0;
     }
 
     .chat-bubble-wrap {
@@ -580,7 +650,7 @@
 
     .founder-haiku {
       font-family: var(--serif);
-      font-size: clamp(1.2rem, 2vw, 1.7rem);
+      font-size: clamp(1.6rem, 2.8vw, 2.4rem);
       font-weight: 300;
       font-style: italic;
       line-height: 1.8;
@@ -594,7 +664,7 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       font-style: normal;
-      color: var(--warm-gray);
+      color: rgba(200, 169, 110, 0.55);
     }
 
     .founder-text .section-label { color: var(--gold); }
@@ -905,8 +975,8 @@
       The system is a wall.<br />
       <em>We take it down<br />one door at a time.</em>
     </h2>
-    <p class="reveal" style="color: var(--warm-gray); font-size: 0.95rem; margin-top: 0.5rem;">
-      Three groups of people — all failing each other — because the tools don't exist yet.
+    <p class="reveal" style="color: var(--warm-gray); font-size: 1.1rem; margin-top: 0.5rem;">
+      Three groups of people — all struggling — because the tools don't exist yet.
     </p>
 
     <div class="problem-grid">
@@ -970,19 +1040,73 @@
       <div class="modes-card reveal">
         <div class="modes-header">Valera Roots — Intake</div>
         <div class="mode-tab-group">
-          <div class="mode-tab active">Conversational</div>
-          <div class="mode-tab">Guided</div>
-          <div class="mode-tab">Checklist</div>
+          <div class="mode-tab active" data-tab="conversational">Conversational</div>
+          <div class="mode-tab" data-tab="guided">Guided</div>
+          <div class="mode-tab" data-tab="checklist">Checklist</div>
         </div>
-        <div class="chat-bubble-wrap">
-          <div class="bubble bubble-ai">
-            Welcome. You're in the right place. Can you tell me a little about what's going on for you right now? There's no wrong answer.
+
+        <!-- Conversational -->
+        <div class="tab-content active" id="tab-conversational">
+          <div class="chat-bubble-wrap">
+            <div class="bubble bubble-ai">
+              Welcome. You're in the right place. Can you tell me a little about what's going on for you right now? There's no wrong answer.
+            </div>
+            <div class="bubble bubble-user">
+              I just got out of rehab and I don't have an ID or Medi-Cal yet
+            </div>
+            <div class="bubble bubble-ai">
+              Thank you for sharing that. Getting an ID is often the first step that unlocks everything else — and there's a free program in California for exactly this situation. Let's start there. Does that work for you?
+            </div>
           </div>
-          <div class="bubble bubble-user">
-            I just got out of rehab and I don't have an ID or Medi-Cal yet
+        </div>
+
+        <!-- Guided -->
+        <div class="tab-content" id="tab-guided">
+          <div class="chat-bubble-wrap">
+            <div class="bubble bubble-ai">
+              Are you currently housed?
+            </div>
+            <div class="guided-options">
+              <div class="guided-btn">Yes, I have stable housing</div>
+              <div class="guided-btn guided-btn-active">No, I need housing support</div>
+              <div class="guided-btn">It's complicated</div>
+            </div>
+            <div class="bubble bubble-ai">
+              Understood. Do you have a California State ID or Driver's License right now?
+            </div>
+            <div class="guided-options">
+              <div class="guided-btn">Yes</div>
+              <div class="guided-btn">No</div>
+              <div class="guided-btn">It's expired</div>
+            </div>
           </div>
-          <div class="bubble bubble-ai">
-            Thank you for sharing that. Getting an ID is often the first step that unlocks everything else — and there's a free program in California for exactly this situation. Let's start there. Does that work for you?
+        </div>
+
+        <!-- Checklist -->
+        <div class="tab-content" id="tab-checklist">
+          <div class="checklist-wrap">
+            <div class="checklist-section">What do you need help with?</div>
+            <label class="checklist-item">
+              <input type="checkbox" checked /> State ID or Driver's License
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" checked /> Medi-Cal (health coverage)
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" /> SNAP (food assistance)
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" /> Housing or shelter
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" /> Employment or job training
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" /> Mental health support
+            </label>
+            <label class="checklist-item">
+              <input type="checkbox" /> Transportation
+            </label>
           </div>
         </div>
       </div>
@@ -1049,7 +1173,7 @@
           Valera Roots exists because getting help shouldn't be harder than the problem that brought you there. The founder entered detox in Los Angeles with no roadmap — figuring out SNAP, Medi-Cal, housing, and a dozen other systems alone, while still in crisis. He became the unofficial guide for other clients.
         </p>
         <br />
-        <p class="reveal" style="color: rgba(249, 245, 238, 0.5);">
+        <p class="reveal">
           He promised his therapist a plain-language guide for future clients. Ten months later, on pension day, that promise became Valera Roots. The name came from Tati — who named his basil plant, and gave him a definition he needed: <em style="color: var(--gold);">"the strong one, the healthy one, the one who thrives."</em>
         </p>
       </div>
@@ -1120,11 +1244,14 @@
       link.addEventListener('click', () => mobileMenu.classList.remove('open'));
     });
 
-    // ── Mode tab switcher (demo) ───────────────────────────
+    // ── Mode tab switcher ──────────────────────────────────
     document.querySelectorAll('.mode-tab').forEach((tab) => {
       tab.addEventListener('click', () => {
         document.querySelectorAll('.mode-tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         tab.classList.add('active');
+        const target = document.getElementById('tab-' + tab.dataset.tab);
+        if (target) target.classList.add('active');
       });
     });
   </script>
