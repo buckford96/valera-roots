@@ -768,6 +768,89 @@
       max-width: 48ch;
     }
 
+    /* ── Mailchimp form ────────────────────────────────────── */
+    .mc-form-wrap {
+      margin-top: 2.5rem;
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    #mc_embed_signup {
+      background: transparent;
+      width: 100%;
+    }
+
+    #mc_embed_signup form {
+      padding: 0;
+    }
+
+    #mc_embed_signup_scroll {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    #mc_embed_signup .mc-field-group {
+      width: 100%;
+    }
+
+    #mc_embed_signup .mc-field-group input {
+      width: 100%;
+      padding: 0.9rem 1.2rem;
+      border: 1px solid var(--sage);
+      border-radius: 2px;
+      background: rgba(255,255,255,0.7);
+      font-family: var(--sans);
+      font-size: 1rem;
+      color: var(--deep);
+      outline: none;
+      transition: border-color var(--transition);
+      box-sizing: border-box;
+    }
+
+    #mc_embed_signup .mc-field-group input::placeholder {
+      color: var(--warm-gray);
+      opacity: 0.7;
+    }
+
+    #mc_embed_signup .mc-field-group input:focus {
+      border-color: var(--green);
+    }
+
+    .mc-submit-wrap {
+      margin-top: 0.5rem;
+    }
+
+    .mc-btn-submit {
+      width: 100%;
+      padding: 1rem 2rem;
+      background: var(--green);
+      color: #fff;
+      border: none;
+      border-radius: 2px;
+      font-family: var(--sans);
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .mc-btn-submit:hover {
+      background: var(--green-mid);
+      transform: translateY(-1px);
+    }
+
+    #mce-error-response, #mce-success-response {
+      font-size: 0.9rem;
+      padding: 0.5rem 0;
+      color: var(--green);
+    }
+
+    #mce-error-response { color: var(--accent); }
+
     /* ── Footer ────────────────────────────────────────────── */
     footer {
       background: var(--parchment);
@@ -1256,14 +1339,38 @@
         <em>services organization?</em>
       </h2>
       <p class="reveal">
-        We're building Valera Roots with our first pilot partners. If you serve vulnerable populations and want to be part of what comes next, we'd like to hear from you.
+        We're building Valera Roots with our first pilot partners. If you serve vulnerable populations and want to be part of what comes next, leave your email and we'll be in touch.
       </p>
-      <div class="reveal">
-        <a href="mailto:chris@valeraroots.com" class="btn-primary">
-          Get in Touch
-          <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 7H13M7 1l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+
+      <!-- Mailchimp signup form -->
+      <div class="mc-form-wrap reveal">
+        <div id="mc_embed_signup">
+          <form action="https://valeraroots.us19.list-manage.com/subscribe/post?u=97d85d602bbb91c6eb79219f0&amp;id=aa5dbfe2db&amp;f_id=007244e7f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+            <div id="mc_embed_signup_scroll">
+              <div class="mc-field-group">
+                <input type="email" name="EMAIL" class="required email" id="mce-EMAIL" required="" placeholder="Your email address" value="">
+              </div>
+              <div class="mc-field-group">
+                <input type="text" name="FNAME" class="text" id="mce-FNAME" placeholder="First name (optional)" value="">
+              </div>
+              <div id="mce-responses" class="clear">
+                <div class="response" id="mce-error-response" style="display: none;"></div>
+                <div class="response" id="mce-success-response" style="display: none;"></div>
+              </div>
+              <!-- Bot protection - do not remove -->
+              <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                <input type="text" name="b_97d85d602bbb91c6eb79219f0_aa5dbfe2db" tabindex="-1" value="">
+              </div>
+              <div class="mc-submit-wrap">
+                <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="mc-btn-submit" value="I'm Interested">
+              </div>
+            </div>
+          </form>
+        </div>
+        <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+        <script type="text/javascript">(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
       </div>
+
     </div>
   </section>
 
