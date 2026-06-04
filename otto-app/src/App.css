@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0f1117;
+  color: #f0f0f0;
+  font-family: 'Georgia', serif;
+  min-height: 100vh;
+}
+
+.kat-wrap {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.kat-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bkatm: 3rem;
+}
+
+.kat-logo {
+  height: 40px;
+  width: auto;
+}
+
+.kat-badge {
+  background: #2d6a4f;
+  color: #d8f3dc;
+  font-size: 0.75rem;
+  font-family: monospace;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.kat-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kat-card h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1.2;
+  color: #f0f0f0;
+}
+
+.kat-card p {
+  color: #9ca3af;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.kat-input {
+  width: 100%;
+  background: #1a1d27;
+  border: 1px solid #2d3148;
+  border-radius: 8px;
+  color: #f0f0f0;
+  font-size: 1rem;
+  padding: 0.875rem 1rem;
+  outline: none;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.kat-input:focus {
+  border-color: #2d6a4f;
+}
+
+.kat-input::placeholder {
+  color: #4b5563;
+}
+
+.kat-btn {
+  background: #2d6a4f;
+  color: #d8f3dc;
+  border: none;
+  border-radius: 8px;
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.2s;
+  align-self: flex-start;
+}
+
+.kat-btn:hover:not(:disabled) {
+  background: #1b4332;
+}
+
+.kat-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.kat-needs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.kat-need {
+  background: #1a1d27;
+  border: 1px solid #2d3148;
+  border-radius: 6px;
+  color: #9ca3af;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.kat-need:hover {
+  border-color: #2d6a4f;
+  color: #d8f3dc;
+}
+
+.kat-need.selected {
+  background: #1b4332;
+  border-color: #2d6a4f;
+  color: #d8f3dc;
+}
+
+.kat-ref {
+  color: #d8f3dc;
+  font-size: 0.95rem;
+}
+
+.kat-loading {
+  color: #2d6a4f;
+  font-style: italic;
+  font-size: 1rem;
+}
