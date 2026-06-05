@@ -17,7 +17,7 @@ ${notes ? `Additional context: ${notes}` : ''}
 Resources found (${resources.length}):
 ${resourceList}
 
-Write a brief synthesis (3-5 sentences) for the case manager. Prioritize the most important resources, flag anything time-sensitive or that requires immediate action, and note any gaps where no resource was found. Speak directly to the case manager, not the client. Do not use bullet points — write in flowing prose.`
+Write a brief synthesis (3-5 sentences) for the case manager. Prioritize the most important resources, flag anything time-sensitive or that requires immediate action, and note any gaps where no resource was found. Speak directly to the case manager, not the client. Do not use bullet points. Write in short paragraphs, one idea per paragraph, separated by line breaks.`
 
   const response = await fetch('https://api.anthropic.com/v1/messages', {
     method: 'POST',
