@@ -237,3 +237,30 @@ body {
 .kat-resource-footer a:hover {
   text-decoration: underline;
 }
+
+.kat-synthesis {
+  background: #F0EBE0;
+  border: 1px solid #D4C9B5;
+  border-left: 4px solid #3D5A3E;
+  border-radius: 6px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.kat-synthesis-label {
+  font-size: 0.7rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #3D5A3E;
+}
+
+.kat-synthesis p {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #2C2C2C;
+}
