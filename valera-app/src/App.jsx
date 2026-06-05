@@ -29,9 +29,14 @@ function App() {
   return (
     <div className="kat-wrap">
       <header className="kat-header">
-        <img src="/valera-roots-logo-inline.png" alt="Valera Roots" className="kat-logo" />
-        <span className="agent-badge">KAT</span>
-      </header>
+  <div className="kat-brand">
+    <img src="/valera-roots-logo-inline-png.png" alt="Valera Roots" className="kat-logo" />
+    <div className="kat-badge-wrap">
+      <span className="kat-badge">KAT</span>
+      <span className="kat-badge-sub">AI Navigator</span>
+    </div>
+  </div>
+</header>
       {step === 1 && (
         <div className="kat-card">
           <h1>Let's get started.</h1>

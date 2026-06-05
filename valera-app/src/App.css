@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,9 +7,9 @@
 }
 
 body {
-  background: #0f1117;
-  color: #f0f0f0;
-  font-family: 'Georgia', serif;
+  background: #FDF9F1;
+  color: #2C2C2C;
+  font-family: 'Lato', sans-serif;
   min-height: 100vh;
 }
 
@@ -19,25 +21,44 @@ body {
 
 .kat-header {
   display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-bkatm: 3rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #E8E0D0;
 }
 
 .kat-logo {
-  height: 40px;
+  height: 90px;
   width: auto;
 }
 
+.kat-badge-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
 .kat-badge {
-  background: #2d6a4f;
-  color: #d8f3dc;
-  font-size: 0.75rem;
-  font-family: monospace;
-  padding: 0.25rem 0.6rem;
-  border-radius: 4px;
-  letter-spacing: 0.05em;
+  background: #3D5A3E;
+  color: #FDF9F1;
+  font-size: 0.85rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  border: 2px solid #2C4230;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.12);
+}
+
+.kat-badge-sub {
+  font-size: 0.65rem;
+  color: #9C8E7E;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
 }
 
 .kat-card {
@@ -47,54 +68,59 @@ body {
 }
 
 .kat-card h1 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 400;
+  font-family: 'Cormorant Garamond', serif;
   line-height: 1.2;
-  color: #f0f0f0;
+  color: #2C2C2C;
 }
 
 .kat-card p {
-  color: #9ca3af;
+  color: #6B6B6B;
   font-size: 1rem;
   line-height: 1.6;
 }
 
 .kat-input {
   width: 100%;
-  background: #1a1d27;
-  border: 1px solid #2d3148;
-  border-radius: 8px;
-  color: #f0f0f0;
+  background: #FFFFFF;
+  border: 1px solid #D4C9B5;
+  border-radius: 6px;
+  color: #2C2C2C;
   font-size: 1rem;
   padding: 0.875rem 1rem;
   outline: none;
-  font-family: inherit;
+  font-family: 'Lato', sans-serif;
   resize: vertical;
+  transition: border-color 0.2s;
 }
 
 .kat-input:focus {
-  border-color: #2d6a4f;
+  border-color: #3D5A3E;
 }
 
 .kat-input::placeholder {
-  color: #4b5563;
+  color: #B0A898;
 }
 
 .kat-btn {
-  background: #2d6a4f;
-  color: #d8f3dc;
+  background: #3D5A3E;
+  color: #FDF9F1;
   border: none;
-  border-radius: 8px;
-  padding: 0.875rem 1.5rem;
-  font-size: 1rem;
-  font-family: inherit;
+  border-radius: 6px;
+  padding: 0.875rem 1.75rem;
+  font-size: 0.85rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   cursor: pointer;
   transition: background 0.2s;
   align-self: flex-start;
 }
 
 .kat-btn:hover:not(:disabled) {
-  background: #1b4332;
+  background: #2C4230;
 }
 
 .kat-btn:disabled {
@@ -109,50 +135,54 @@ body {
 }
 
 .kat-need {
-  background: #1a1d27;
-  border: 1px solid #2d3148;
+  background: #FFFFFF;
+  border: 1px solid #D4C9B5;
   border-radius: 6px;
-  color: #9ca3af;
+  color: #6B6B6B;
   padding: 0.5rem 1rem;
   font-size: 0.9rem;
-  font-family: inherit;
+  font-family: 'Lato', sans-serif;
   cursor: pointer;
   transition: all 0.15s;
 }
 
 .kat-need:hover {
-  border-color: #2d6a4f;
-  color: #d8f3dc;
+  border-color: #3D5A3E;
+  color: #3D5A3E;
 }
 
 .kat-need.selected {
-  background: #1b4332;
-  border-color: #2d6a4f;
-  color: #d8f3dc;
+  background: #3D5A3E;
+  border-color: #3D5A3E;
+  color: #FDF9F1;
 }
 
 .kat-ref {
-  color: #d8f3dc;
+  color: #3D5A3E;
   font-size: 0.95rem;
+  font-weight: 700;
 }
 
 .kat-loading {
-  color: #2d6a4f;
+  color: #A0522D;
   font-style: italic;
   font-size: 1rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
 .kat-results h2 {
-  font-size: 1.1rem;
-  color: #9ca3af;
+  font-size: 1rem;
+  color: #6B6B6B;
   margin-bottom: 1.5rem;
   font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .kat-resource {
-  background: #1a1d27;
-  border: 1px solid #2d3148;
-  border-radius: 10px;
+  background: #FFFFFF;
+  border: 1px solid #E8E0D0;
+  border-radius: 8px;
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
@@ -161,24 +191,26 @@ body {
 }
 
 .kat-resource h3 {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: 400;
-  color: #f0f0f0;
+  font-family: 'Cormorant Garamond', serif;
+  color: #2C2C2C;
 }
 
 .kat-resource p {
-  color: #9ca3af;
+  color: #6B6B6B;
   font-size: 0.9rem;
   line-height: 1.6;
 }
 
 .kat-eligibility {
-  color: #d8f3dc !important;
+  color: #3D5A3E !important;
   font-size: 0.85rem !important;
+  font-weight: 700 !important;
 }
 
 .kat-how {
-  color: #d8f3dc !important;
+  color: #A0522D !important;
   font-size: 0.85rem !important;
 }
 
@@ -188,15 +220,18 @@ body {
   align-items: center;
   margin-top: 0.5rem;
   font-size: 0.85rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #E8E0D0;
 }
 
 .kat-resource-footer span {
-  color: #9ca3af;
+  color: #6B6B6B;
 }
 
 .kat-resource-footer a {
-  color: #2d6a4f;
+  color: #3D5A3E;
   text-decoration: none;
+  font-weight: 700;
 }
 
 .kat-resource-footer a:hover {
