@@ -80,7 +80,9 @@ function App() {
           {!loading && katSummary && (
             <div className="kat-synthesis">
               <div className="kat-synthesis-label">KAT's assessment</div>
-              <p>{katSummary}</p>
+              {katSummary.split('\n\n').map((para, i) => (
+  <p key={i}>{para}</p>
+))}
             </div>
           )}
           {!loading && resources.length === 0 && <p className="kat-ref">No matching resources found.</p>}
